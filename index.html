@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <style>
+        .button {
+            padding: 10px 10px;
+            width: 100%;
+        }
+
+        hr.style-one {
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+    </style>
     <title>Score Keeper</title>
 </head>
 
@@ -17,7 +30,8 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-2by1">
-                                <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+                                <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                    alt="">
                             </figure>
                         </div>
                         <header class="card-header">
@@ -27,9 +41,10 @@
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+                                <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span>
+                                </h1>
                                 <p class="subtitle">Use the buttons below to keep score</p>
-    
+
                                 <label for="playTo" class="label is-large is-inline">Playing to: </label>
                                 <div class="select is-rounded">
                                     <select name="" id="playTo">
@@ -43,19 +58,29 @@
                                         <option value="10">10</option>
                                         <option value="11">11</option>
                                     </select>
-                                  </div>
-                            
+                                </div>
+
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <button class="card-footer-item button is-primary is-large" id="p1Button">+1 Player One</button>
-                            <button class="card-footer-item button is-info is-large" id="p2Button">+1 Player Two</button>
-                            <button class="card-footer-item button is-danger is-large" id="reset">Reset</button>
-                        </footer>
+                        <hr>
+                        <div class="columns ">
+                            <div class="column is-12-tablet is-4-desktop">
+                                <button class="card-footer-item button is-primary is-large" id="p1Button">+1 Player
+                                    One</button>
+                            </div>
+                            <div class="column is-12-tablet is-4-desktop">
+                                <button class="card-footer-item button is-info is-large" id="p2Button">+1
+                                    PlayerTwo</button>
+                            </div>
+                            <div class="column is-12-tablet is-4-desktop">
+                                <button class="card-footer-item button is-danger is-large" id="reset">Reset</button>
+                            </div>
+
+                            </footer>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <script src="app.js"></script>
 </body>
